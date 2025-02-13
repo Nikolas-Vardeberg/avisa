@@ -84,3 +84,26 @@ li {
     @apply text-base/7 text-muted-foreground font-normal lg:text-lg/8;
 }
 
+h1 {
+    @apply text-[42px]/[50px] text-primary lg:text-[64px]/[76px];
+}
+
+h2 {
+    @apply text-[32px]/10 text-primary lg:text-[42px]/[50px];
+}
+
+h3 {
+    @apply text-[28px]/9 text-primary lg:text-[32px]/[45px];
+}
+
+h4 {
+    @apply text-[22px]/8 text-primary lg:text-[26px]/[34px];
+}
+
+h5 {
+    @apply text-[16px]/8 text-primary lg:text-[20px]/[28px];
+}
+
+h6 {
+    @apply text-lg/6 text-primary lg:text-xl;
+}

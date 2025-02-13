@@ -16,12 +16,11 @@ export default function Home() {
         </div>
       ) : (
         <div className="flex flex-col gap-8">
-          {data?.length > 0 && (
-            <TransportItem page={data[0]} key={data[0]._id} />
-          )}
-          <div className="grid grid-cols-1 md:grid-cols-2 justify-between gap-8">
-            {data?.slice(1).map((page: Page) => (
-              <TransportItem page={page} key={page._id} />
+           <div className="grid grid-cols-1 md:grid-cols-2 justify-between gap-8">
+            {data?.slice(1).map((page: Page, index: number) => (
+              <div key={page._id} className={index % 5 === 4 ? "col-span-2" : ""}>
+                <TransportItem page={page} />
+              </div>
             ))}
           </div>
         </div>

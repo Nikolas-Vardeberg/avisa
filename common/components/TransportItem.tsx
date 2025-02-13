@@ -14,11 +14,11 @@ const TransportItem = ({ page }: TransportItemProps) => {
                     image={page.mainImage}
                     height={300}
                     width={500}
-                    className="object-cover w-full group-hover:border-dashed border"
+                    className="object-cover w-full group-hover:border-dashed border bg-yellow-200"
                 />
             )}
             <div className="flex flex-col gap-4 py-3">
-                <h4 className="text-3xl text-black underline dark:text-white group-hover:no-underline">{page.title}</h4>
+                <h4 className="text-3xl text-black group-hover:underline dark:text-white">{page.title}</h4>
                 {page.entry && (
 					<p className={clsx('line-clamp-3 text-muted-foreground')}>{toPlainText(page.entry)}</p>
 				)}
