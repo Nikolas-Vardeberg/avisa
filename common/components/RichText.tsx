@@ -36,7 +36,6 @@ const PortableTextWithComponents = ({ blocks, elementClassName, id, ...props }: 
                 components={{
                     block: {
                         normal: ({ children }) => <p className={clsx("p-p", elementClassName)}>{children}</p>
-
                     },
                     list: {
                         bullet: ({ children, value }) => {

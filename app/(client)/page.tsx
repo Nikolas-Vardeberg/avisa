@@ -16,15 +16,21 @@ export default function Home() {
         </div>
       ) : (
         <div className="flex flex-col gap-8">
-           <div className="grid grid-cols-1 md:grid-cols-2 justify-between gap-8">
-            {data?.slice(1).map((page: Page, index: number) => (
-              <div key={page._id} className={index % 5 === 4 ? "col-span-2" : ""}>
-                <TransportItem page={page} />
-              </div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 justify-between gap-8">
+            {data?.slice(1).map((page: Page, index: number) => {
+              const isFifthItem = (index + 1) % 5 === 0; 
+                return (
+                  <div 
+                    key={page._id} 
+                    className={isFifthItem ? "col-span-full" : ""} 
+                  >
+                    <TransportItem page={page} />
+                  </div>
+                );
+              })}
+            </div>
           </div>
-        </div>
-      )}
+        )}
     </div>
   );
 }

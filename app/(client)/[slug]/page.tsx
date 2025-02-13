@@ -1,3 +1,4 @@
+import InfoView from "@/common/components/views/info-view";
 import { INFOPAGE_QUERY } from "@/common/queries/pages/info-page.queries";
 import { sanityFetch } from "@/sanity/lib/live"
 import { QueryParams } from "next-sanity";
@@ -20,8 +21,6 @@ export default async function InfoPage(props: Props) {
     if (!initial || !initial.data) return notFound();
 
     return(
-        <pre>
-            {JSON.stringify(initial.data, undefined, 2)}
-        </pre>
+        <InfoView data={initial.data} />
     )
 }
