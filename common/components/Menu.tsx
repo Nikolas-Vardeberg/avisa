@@ -29,9 +29,15 @@ export default function Menu() {
         <>
         <header className="bg-background border-b-2 z-10 w-full sticky top-0">
         <div className="py-5 px-8 max-w-[1200px] mx-auto flex items-center justify-between lg:py-7 gap-x-12">
-            <Link href='/' className='flex items-center justify-center lead !text-black dark:!text-white' aria-label='Hjem'>
-                Nordvia
-            </Link>
+            <div className="flex items-center justify-center gap-x-6">
+                <Link href='/' className='flex items-center justify-center lead !text-black dark:!text-white' aria-label='Hjem'>
+                    Nordvia
+                </Link>
+                
+                <Link href="/learling" className="text-muted-foreground hover:text-foreground hover:underline">
+                    Lærling
+                </Link>
+            </div>
 
            
 
@@ -83,7 +89,7 @@ export default function Menu() {
 
             </div>
         </div>
-    <Progress value={scrollProgress} className="bg-yellow-100 h-1" />
+        <Progress value={scrollProgress} className="h-1 bg-yellow-100" />
     </header>
     </>
     )

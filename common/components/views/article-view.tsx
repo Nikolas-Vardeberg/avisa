@@ -10,9 +10,9 @@ import { useRouter } from "next/navigation";
 export default function ArticleView({ data }: { data: Article }) {
     const router = useRouter();
 
-    return(
+    return (
         <div className="flex flex-col max-w-[1200px] gap-5 mx-auto py-10 px-8">
-            <div>
+            <div className="flex justify-between items-center">
                 <Button onClick={() => router.back()} variant="link">
                     <ArrowLeft />
                     Tilbake
@@ -26,9 +26,9 @@ export default function ArticleView({ data }: { data: Article }) {
                 width={1200}
                 className="object-cover w-full bg-yellow-200"
             />
-            <div className="flex flex-col max-w-[800px] mx-auto">
+            <div className="flex flex-col max-w-[800px] gap-4 mx-auto">
                 <RichText blocks={data.content} />
             </div>
         </div>
-    )
+    );
 }
